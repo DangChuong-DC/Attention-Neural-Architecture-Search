@@ -1,0 +1,22 @@
+digraph {
+	node [align=center fontname=times fontsize=20 height=0.5 penwidth=2 shape=rect style=filled width=0.5]
+	edge [fontname=times fontsize=20]
+rankdir=LR
+	input_1 [fillcolor=darkseagreen2]
+	input_2 [fillcolor=darkseagreen2]
+	0 [fillcolor=lightblue]
+	1 [fillcolor=lightblue]
+	2 [fillcolor=lightblue]
+	input_2 -> 0 [label=dil_conv_3x3 fillcolor=black style=bold]
+	input_1 -> 0 [label=dil_conv_3x3 fillcolor=black style=bold]
+	input_2 -> 1 [label=sep_conv_3x3 fillcolor=black style=bold]
+	0 -> 1 [label=channel_score fillcolor=black style=bold]
+	0 -> 2 [label=spatial_score_1x1 fillcolor=black style=bold]
+	1 -> 2 [label=channel_score fillcolor=black style=bold]
+	"mixed attention" [fillcolor=palegoldenrod]
+	0 -> "mixed attention" [color=purple fillcolor=purple]
+	1 -> "mixed attention" [color=purple fillcolor=purple]
+	2 -> "mixed attention" [color=purple fillcolor=purple]
+	mask [fillcolor=palegoldenrod]
+	"mixed attention" -> mask [label=sigmoid fillcolor=black]
+}
