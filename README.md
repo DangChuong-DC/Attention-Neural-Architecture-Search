@@ -55,4 +55,5 @@ Please refer ```summary.pdf``` for more results and details of experiments
 This code is implemented based on:<br/>
 https://github.com/quark0/darts<br/>
 https://github.com/moskomule/senet.pytorch<br/>
-https://github.com/akamaster/pytorch_resnet_cifar10
+https://github.com/akamaster/pytorch_resnet_cifar10<br/>
+https://github.com/chenxin061/pdarts
